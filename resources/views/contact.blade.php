@@ -24,7 +24,9 @@
        <div>
          <H1>This is Contact Page</H1>
          <p>Here You get my contact information if you visit my portfolio.</p>
-         <a href="{{ route('contact') }}">Contact</a>
+         <a href="{{ route('frontend.contact') }}">Contact (Frontend)</a> <br><br>
+         <a href="{{ route('backend.contact') }}">Contact (Backend)</a>
+
        </div>
     </body>
 </html>

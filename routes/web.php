@@ -13,19 +13,20 @@ use App\Http\Controllers\Frontend\HomeController;
 |
 */
 
-Route::namespace('Frontend')->group(function(){
+Route::name('frontend.')->namespace('Frontend')->group(function(){
 
     Route::get('/', [HomeController::class,'welcome']);
     Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 
 });
 
-Route::prefix('admin')->namespace('Backend')->group(function(){
+Route::name('backend.')->prefix('admin')->namespace('Backend')->group(function(){
 
-    Route::get('/create', [HomeController::class,'welcome']);
-    Route::get('/lists', [HomeController::class,'welcome']);
-    Route::get('/dashboard', [HomeController::class,'welcome']);
-    Route::get('/users', [HomeController::class,'welcome']);
+    Route::get('/create', [HomeController::class,'welcome'])->name('create');
+    Route::get('/lists', [HomeController::class,'welcome'])->name('lists');
+    Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+    Route::get('/users', [HomeController::class,'welcome'])->name('users');
+
 });
 
 
